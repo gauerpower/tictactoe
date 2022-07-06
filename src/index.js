@@ -9,8 +9,10 @@ import Game from "./components/Game.jsx";
         2. Components refactored into external files.
         3. Move history list modified to display player & coordinate for each turn.
         4. <Board/> refactored to render rows and squares using nested loops/maps.
-        5. Appearance changed in CSS.
-
+        5. Buttons made flippable.
+        6. Winning squares will be highlighted.
+        7. Rewind buttons will only appear if the game has started.
+        8. Appearance changed in CSS.
 */
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
