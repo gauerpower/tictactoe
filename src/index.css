@@ -1,38 +1,141 @@
+
+/* Color palettes to choose from (just comment in/out */
+/* :root {
+  --firstColor: #3330E4;
+  --secondColor: #FBB454;
+  --thirdColor: #F637EC;
+  --fourthColor: #FAEA48;
+} */
+
+:root {
+  --firstColor: #54BAB9;
+  --secondColor: #18978F;
+  --thirdColor: #E9DAC1;
+  --fourthColor: #F7ECDE;
+}
+/* 
+:root {
+  --firstColor: #501B1D;
+  --secondColor: #65586C;
+  --thirdColor: #83677B;
+  --fourthColor: #ADADAD;
+} */
+
+/* :root {
+  --firstColor: #05386B;
+  --secondColor: #379683;
+  --thirdColor: #8EE4AF;
+  --fourthColor: #EDF5E1;
+} */
+
+
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  background-color: var(--firstColor);
 }
 
-ol, ul {
-  padding-left: 30px;
+.game {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
 }
 
-.board-row:after {
+/* .game {
+  display: flex;
+  flex-direction: row;
+} */
+
+
+.game-board {
+  /* width: 50%; */
+  margin-top: 50px;
+  margin-bottom: 75px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.game-info {
+  margin: auto;
+  text-align: center;
+  width: 297px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-status{
+  color: var(--thirdColor);
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+  font-size: 24px;
+}
+
+.button-area {
+  width: 297px;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  margin: auto;
+}
+
+.button-area ul li button {
+  width: 200px;
+  padding: 5px;
+  background-color: var(--secondColor);
+  color: var(--fourthColor);
+  font-family: Arial, sans-serif;
+}
+
+.button-area button {
+  width: 200px;
+  padding: 5px;
+  background-color: var(--secondColor);
+  color: var(--fourthColor);
+  font-family: Arial, sans-serif;
+
+
+}
+
+
+.button-area ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+
+
+
+/* .board-row:after {
   clear: both;
   content: "";
   display: table;
-}
+} */
 
 .status {
   margin-bottom: 10px;
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: var(--secondColor);
+  border: 1px solid var(--fourthColor);
+  color: var(--fourthColor);
   float: left;
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 100px;
+  height: 100px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 100px;
 }
-
-
 
 .square:focus {
   outline: none;
@@ -42,11 +145,3 @@ ol, ul {
   background: #ddd;
 }
 
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  margin-left: 20px;
-}

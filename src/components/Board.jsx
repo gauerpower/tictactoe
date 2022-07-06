@@ -10,8 +10,10 @@ function Board(props) {
                                 ? true : false}
       />;
     }
+    // Using nested maps to create the board. Rows will be labeled 0/1/2,
+    // squares will be created with a math problem based on the row number.
       return (
-        <div>
+        <div className="board">
           {[0, 1, 2].map(row => {
             return <div className="board-row" key={row}>
               {[0, 1, 2].map((square) => {

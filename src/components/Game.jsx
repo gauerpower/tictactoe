@@ -35,8 +35,8 @@ function Game() {
       // Checking every combination of squares that could be game-winning.
       // Reminder: The squares array in the gameState holds an array of X's, O's, or null's
       // depending on whether a square has been clicked and who did the clicking.
-      // If all 3 values match, gameOver state is set to true & the game-ending array is set, 
-      // and this function returns either X or O depending on who won.
+      // If all 3 values match, gameOver state is set to true + the game-ending array. 
+      // The outer function returns either X or O depending on who won.
       for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
@@ -185,9 +185,11 @@ function Game() {
           <Board squares={current.squares} isGameOver={isGameOver} onClick={(i)=> handleSquareClick(i)}/>
         </div>
         <div className="game-info">
-          <div>{status}</div>
+          <div className="game-status">{status}</div>
+          {gameState.history.length > 1 ? <div className="button-area">
           <Moves jumpTo={jumpTo} gameState={gameState} history={history} current={current}/>
           <button onClick={flipButtons}>Flip buttons</button>
+          </div> : null}
         </div>
       </div>
     );
