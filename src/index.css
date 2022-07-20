@@ -1,5 +1,5 @@
 
-/* Color palettes to choose from (just comment in/out */
+/* Color palettes to choose from (just comment in/out) */
 /* :root {
   --firstColor: #3330E4;
   --secondColor: #FBB454;
@@ -106,15 +106,6 @@ h1 {
   padding: 0;
   list-style-type: none;
 }
-
-
-
-
-/* .board-row:after {
-  clear: both;
-  content: "";
-  display: table;
-} */
 
 .status {
   margin-bottom: 10px;
